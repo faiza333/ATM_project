@@ -144,12 +144,7 @@ class StartPage(tk.Frame):
         
         bottom_frame = tk.Frame(self, relief ='raised', borderwidth=3)
         bottom_frame.pack(fill = 'x', side = 'bottom')
-        '''
-        visa_photo = tk.PhotoImage(file='visa.png')
-        visa_label=tk.Label(bottom_frame,image=visa_photo)
-        visa_label.pack(side = 'left')
-        visa_label.image = visa_photo
-        '''
+    
     
         def tick():
             current_time = time.strftime('%I:%M %p').lstrip('0').replace(' 0',' ')
@@ -413,6 +408,7 @@ class Password_changePage(tk.Frame):
             
 class Fawry_Service(tk.Frame):
 
+
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent, bg = "#458B74")
         self.controller = controller
@@ -420,6 +416,8 @@ class Fawry_Service(tk.Frame):
         label1.pack(pady = 25)
         bottom_frame = tk.Frame(self, relief ='raised', borderwidth=3)
         bottom_frame.pack(fill = 'x', side = 'bottom')
+        
+        
         def tick():
             current_time = time.strftime('%I:%M %p').lstrip('0').replace(' 0',' ')
             time_label.config(text=current_time)
